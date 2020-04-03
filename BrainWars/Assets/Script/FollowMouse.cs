@@ -22,20 +22,20 @@ public class FollowMouse : MonoBehaviour
 
     void Run()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
+        //if (Input.GetMouseButtonDown(0))
+        //{
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
             rb.MovePosition(position);
             //Dodałem start bo taleportowało na środek planszy po włączeniu
-            start = true;
+            /*start = true;
         }
 
         else if (start)
         {
             position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
             rb.MovePosition(position);
-        }
+        }*/
     }
 
 
