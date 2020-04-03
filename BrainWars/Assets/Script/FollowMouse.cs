@@ -17,6 +17,7 @@ public class FollowMouse : MonoBehaviour
     void Update()
     {
         Run();
+        
     }
 
 
@@ -36,6 +37,20 @@ public class FollowMouse : MonoBehaviour
             position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
             rb.MovePosition(position);
         }*/
+    }
+
+
+    
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "MemoryBad")
+        {
+            Debug.Log("D");
+            Destroy(this.gameObject);
+        }
+        
     }
 
 
