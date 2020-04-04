@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2051417095321246182}
   - component: {fileID: 2051417095321246180}
   - component: {fileID: 2051417095321246179}
+  - component: {fileID: -8651578100493250016}
   m_Layer: 0
   m_Name: Memory
-  m_TagString: Untagged
+  m_TagString: MyMemory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,8 +115,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   army: 3
   spownTime: 2
-  warrior: {fileID: 0}
+  warrior: {fileID: 2377605916168991113, guid: 75393fb587a786d4581a6811bcb842cb, type: 3}
   border: {fileID: 2051417096456447577}
+  memory: {fileID: 2051417095321246182}
+--- !u!114 &-8651578100493250016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051417095321246183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2cd9b9a19ee2e4db2c3190366bb3a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2051417096456447578
 GameObject:
   m_ObjectHideFlags: 0

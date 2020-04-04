@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2377605916168991108}
   m_Layer: 0
   m_Name: Warrior - Good
-  m_TagString: Untagged
+  m_TagString: MyWarrior
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.1
+  liveDurationToDeath: 2
 --- !u!50 &2377605916168991109
 Rigidbody2D:
   serializedVersion: 4
