@@ -7,7 +7,10 @@ public class CreateArmy : MonoBehaviour
     public int army = 0;
     public float spownTime = 2f;
     private bool shoot = false;
-    public GameObject warrior;
+    public GameObject myWarrior;
+    public GameObject enemyWarrior;
+
+
  
 
 
@@ -30,11 +33,24 @@ public class CreateArmy : MonoBehaviour
     {
 
 
-        if (Input.GetMouseButtonDown(0) && !shoot && this.tag=="MyMemory")
+        if (Input.GetMouseButtonDown(0) && !shoot && this.tag=="EnemyMemory")
         {
             InvokeRepeating("SendWarrior", 0.1f, 1);
             shoot = true;
         }
+
+        if (Input.GetMouseButtonDown(1) && !shoot && this.tag == "MyMemory")
+        {
+            InvokeRepeating("SendWarrior", 0.1f, 1);
+            shoot = true;
+        }
+
+
+
+
+
+
+
     }
 
     //Dodaj kolejnego wojownika do bazy i  zmień kolor obramowania
@@ -80,7 +96,17 @@ public class CreateArmy : MonoBehaviour
         if (army > 0)
         {
             Vector3 place = transform.position;
-            Instantiate(warrior, place, Quaternion.identity);
+
+            if (this.tag == "MyMemory")
+            {
+                Instantiate(myWarrior, place, Quaternion.identity);
+            }
+            else if (this.tag == "EnemyMemory")
+            {
+                Instantiate(enemyWarrior, place, Quaternion.identity);
+            }
+
+
             army -= 1;
             StopAddArmy();
         }
@@ -129,27 +155,18 @@ public class CreateArmy : MonoBehaviour
     {
         
               
-        if ((collision.gameObject.tag == "MyWarrior") && (this.tag == "EnemyMemory"))
+        if (((collision.gameObject.tag == "MyWarrior") && (this.tag == "EnemyMemory")) ||
+            (collision.gameObject.tag == "EnemyWarrior") && (this.tag == "MyMemory"))
         {
             collision.gameObject.GetComponent<FollowMouse>().Destroy();           
-            controlLevel -= 1;
-            Debug.Log("Ja atakuję !");
-            Debug.Log("Życie pamięci " + controlLevel);
-            
+            controlLevel -= 1;                   
             if(controlLevel == 0)
             {
                 ChangeTeam();
+                controlLevel = 10;
             }          
         }
-        else if ((collision.gameObject.tag == "EnemyWarrior") && (this.tag == "MyMemory"))
-        {
-            collision.gameObject.GetComponent<FollowMouse>().Destroy();
-            Debug.Log("atakują nas !");
-        }
-        else
-        {
-            Debug.Log("Co ty wyprawiasz ?!");
-        }
+        
     }
 
 

@@ -115,9 +115,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   army: 3
   spownTime: 2
-  warrior: {fileID: 2377605916168991113, guid: 75393fb587a786d4581a6811bcb842cb, type: 3}
+  myWarrior: {fileID: 2377605916168991113, guid: 75393fb587a786d4581a6811bcb842cb,
+    type: 3}
+  enemyWarrior: {fileID: 7999837947571101006, guid: 45f68d24b913dea42a3f5bc4e90e744b,
+    type: 3}
   border: {fileID: 2051417096456447577}
   memory: {fileID: 2051417095321246182}
+  controlLevel: 10
 --- !u!114 &-8651578100493250016
 MonoBehaviour:
   m_ObjectHideFlags: 0
