@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class CreateArmy : MonoBehaviour
 {
+    public int maxArmy = 5;
     public int army = 0;
     public float spownTime = 2f;
     private bool shoot = false;
     public GameObject myWarrior;
     public GameObject enemyWarrior;
+
+
+    public SpriteRenderer pole;
 
 
  
@@ -25,6 +29,7 @@ public class CreateArmy : MonoBehaviour
         StartAddArmy();
         CheckTeam();
 
+        ChangeStateColor();
 
     }
 
@@ -46,7 +51,11 @@ public class CreateArmy : MonoBehaviour
         }
 
 
+        if (Input.GetKeyDown("q"))
+        {
+            ChangeStateColor();
 
+        }
 
 
 
@@ -56,9 +65,13 @@ public class CreateArmy : MonoBehaviour
     //Dodaj kolejnego wojownika do bazy i  zmień kolor obramowania
     void AddArmy()
     {
-        army++;
-        //Debug.Log(army);
-        ChangeColor();
+        if(maxArmy > army)
+        {
+            army++;
+            //Debug.Log(army);
+            ChangeColor();
+        }
+        
     }
 
     //Zatrzymaj produkcję wojsk
@@ -149,6 +162,8 @@ public class CreateArmy : MonoBehaviour
             this.tag = "EnemyMemory";
         }
         CheckTeam();
+        ChangeStateColor();
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -171,6 +186,25 @@ public class CreateArmy : MonoBehaviour
 
 
 
+
+
+
+
+
+
+    public void ChangeStateColor()
+    {
+        if(this.tag == "MyMemory")
+        {           
+            pole.sortingLayerName = "blue";
+            
+
+        }
+        else if (this.tag == "EnemyMemory")
+        {
+            pole.sortingLayerName = "ukryj";
+        }
+    }
 
 
 }

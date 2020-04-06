@@ -9,6 +9,18 @@ TagManager:
   - EnemyMemory
   - EnemyWarrior
   - MyWarrior
+  - 1 GL
+  - 1 GP
+  - 2 GL
+  - 2 GP
+  - 3 GL
+  - 3 GP
+  - 4 DL
+  - 4 DP
+  - 5 DL
+  - 5 DP
+  - 6 DL
+  - 6 DP
   layers:
   - Default
   - TransparentFX
@@ -43,6 +55,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ukryj
+    uniqueID: 2713784009
+    locked: 0
+  - name: pink
+    uniqueID: 2523235973
+    locked: 0
+  - name: blue
+    uniqueID: 3786972297
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
