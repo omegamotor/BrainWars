@@ -21,6 +21,8 @@ TagManager:
   - 5 DP
   - 6 DL
   - 6 DP
+  - P1
+  - P2
   layers:
   - Default
   - TransparentFX

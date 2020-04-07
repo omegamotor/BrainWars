@@ -37,14 +37,14 @@ public class CreateArmy : MonoBehaviour
     private void Update()
     {
 
-
-        if (Input.GetMouseButtonDown(0) && !shoot && this.tag=="EnemyMemory")
+        //if (Input.GetMouseButtonDown(0) && !shoot && this.tag=="EnemyMemory")
+        if (Input.GetKey("m") && !shoot && this.tag=="EnemyMemory")
         {
             InvokeRepeating("SendWarrior", 0.1f, 1);
             shoot = true;
         }
 
-        if (Input.GetMouseButtonDown(1) && !shoot && this.tag == "MyMemory")
+        if (Input.GetKey("c") && !shoot && this.tag == "MyMemory")
         {
             InvokeRepeating("SendWarrior", 0.1f, 1);
             shoot = true;

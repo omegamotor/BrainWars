@@ -12,16 +12,6 @@ public class BrainStatus : MonoBehaviour
 
 
 
-    public void CheckKing()
-    {
-
-    
-
-
-
-
-    }
-
 
    
 

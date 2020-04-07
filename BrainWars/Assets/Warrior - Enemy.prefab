@@ -97,6 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.1
+  player: {fileID: 3126147294557456526, guid: e8ad1961bc66b35479ea7a12ad8577a5, type: 3}
+  pp: {fileID: 0}
+  p: {fileID: 3126147294557456521, guid: e8ad1961bc66b35479ea7a12ad8577a5, type: 3}
   liveDurationToDeath: 2
 --- !u!50 &7999837947571100994
 Rigidbody2D:
