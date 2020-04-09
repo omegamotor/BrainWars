@@ -14,7 +14,7 @@ public class CreateArmy : MonoBehaviour
 
     public SpriteRenderer pole;
 
-
+    public GameStatus status;
  
 
 
@@ -155,12 +155,16 @@ public class CreateArmy : MonoBehaviour
     {
         if (this.tag == "EnemyMemory")
         {
-            this.tag = "MyMemory";            
+            this.tag = "MyMemory";
+            
+
         }
         else
         {
             this.tag = "EnemyMemory";
+            
         }
+        
         CheckTeam();
         ChangeStateColor();
 
@@ -196,8 +200,7 @@ public class CreateArmy : MonoBehaviour
     {
         if(this.tag == "MyMemory")
         {           
-            pole.sortingLayerName = "blue";
-            
+            pole.sortingLayerName = "blue";      
 
         }
         else if (this.tag == "EnemyMemory")

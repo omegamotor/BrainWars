@@ -23,6 +23,7 @@ TagManager:
   - 6 DP
   - P1
   - P2
+  - End
   layers:
   - Default
   - TransparentFX

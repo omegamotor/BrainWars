@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayScript : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
 
-    public void Play()
+    public void Retry()
     {
-        Debug.Log("Exit");
+        Debug.Log("Retry");
         SceneManager.LoadScene("Game");
+        
     }
-
     public void Exit()
     {
         Debug.Log("Exit");
         Application.Quit();
+        
     }
+
 
 }

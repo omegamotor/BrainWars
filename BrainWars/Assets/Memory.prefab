@@ -113,12 +113,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd2d2b0829de075429c4c02fb9b7e829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxArmy: 5
   army: 3
   spownTime: 2
   myWarrior: {fileID: 2377605916168991113, guid: 75393fb587a786d4581a6811bcb842cb,
     type: 3}
   enemyWarrior: {fileID: 7999837947571101006, guid: 45f68d24b913dea42a3f5bc4e90e744b,
     type: 3}
+  pole: {fileID: 0}
+  status: {fileID: 6465932959792979113, guid: 1f35412fbd48ce44182785211e401f1c, type: 3}
   border: {fileID: 2051417096456447577}
   memory: {fileID: 2051417095321246182}
   controlLevel: 10
