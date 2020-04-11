@@ -1127,6 +1127,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1142,6 +1143,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1f69b3dee8ff64ea06a4f8fcd3717f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1780,7 +1793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 220.84999}
+  m_AnchoredPosition: {x: -277.69, y: 277.65}
   m_SizeDelta: {x: 189.76, y: 53.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813771533
@@ -4356,7 +4369,7 @@ PrefabInstance:
     - target: {fileID: 1309724031694923555, guid: d1ccc8a22eab1ec4f8122ac5ffe4080f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -233
+      value: -263
       objectReference: {fileID: 0}
     - target: {fileID: 1309724031694923555, guid: d1ccc8a22eab1ec4f8122ac5ffe4080f,
         type: 3}
@@ -4480,12 +4493,12 @@ PrefabInstance:
     - target: {fileID: 2184356633721667083, guid: c461e99079094004b90740dc4320104b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 298
+      value: -263.01
       objectReference: {fileID: 0}
     - target: {fileID: 2184356633721667083, guid: c461e99079094004b90740dc4320104b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 178
+      value: 226.6
       objectReference: {fileID: 0}
     - target: {fileID: 2184356633721667083, guid: c461e99079094004b90740dc4320104b,
         type: 3}
@@ -4634,12 +4647,12 @@ PrefabInstance:
     - target: {fileID: 6073835229541807899, guid: 756bd74e70d0a6542a85531b3b896a76,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.03
+      value: 4.89
       objectReference: {fileID: 0}
     - target: {fileID: 6073835229541807899, guid: 756bd74e70d0a6542a85531b3b896a76,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.48
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6073835229541807899, guid: 756bd74e70d0a6542a85531b3b896a76,
         type: 3}

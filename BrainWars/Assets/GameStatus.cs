@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;
+using UnityEditor;
+using System;
 
 public class GameStatus : MonoBehaviour
 {
@@ -11,7 +14,6 @@ public class GameStatus : MonoBehaviour
     public Text winPlayer;
 
     public GameObject endScreen; 
-
 
     void Start()
     {
@@ -34,32 +36,67 @@ public class GameStatus : MonoBehaviour
 
         if(mem.Length == 12)
         {
-            winPlayer.text = "Gracz Niebieski";
-            endScreen.SetActive(true);
+            //winPlayer.text = "Gracz Niebieski";
 
-            
-            InvokeRepeating("Intro", 1f, 5f);
+            //SaveWinPlayerU("1");
+
+            SceneManager.LoadScene("Game_Over");
+
+
         }
         else if (mem.Length == 0)
         {
-            winPlayer.text = "Gracz Czerwony";
-            winPlayer.color = new Color(192f,41f,41f,255f);
-            endScreen.SetActive(true);
-            
-            InvokeRepeating("Intro", 1f, 2f);
-            
-        }
+            //winPlayer.text = "Gracz Czerwony";
+            //winPlayer.color = new Color(192f,41f,41f,255f);
+
+            //SaveWinPlayerU("2");
 
 
 
-        void Intro()
-        {
-            endScreen.SetActive(true);
-            SceneManager.LoadScene("intro");
-        }
+           SceneManager.LoadScene("Game_Over");
 
 
-
+        }     
 
     }
+    /*void Intro()
+    {
+        endScreen.SetActive(true);
+        SceneManager.LoadScene("intro");
+    }*/
+
+    
+    public void SaveWinPlayer(string p)
+    {
+        string path = "Assets/Resources/wygrywa.txt";
+
+
+        File.WriteAllText(path, p);
+
+        Debug.Log(p);
+        Debug.Log("\n\n\n");
+        Debug.Log(File.ReadAllText("Assets/Resources/wygrywa.txt"));
+    }
+
+    public void SaveWinPlayerU(string p)
+    {
+        string path = "Assets/Resources/wygrywa.txt";
+        //File.WriteAllText(path, String.Empty);
+
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.Write(p);
+        writer.Close();
+
+        StreamReader reader = new StreamReader(path);
+
+        Debug.Log(p);
+        Debug.Log("\n\n\n");
+        Debug.Log(reader.ReadLine());
+        reader.Close();
+    }
+
+
+
+
+
 }

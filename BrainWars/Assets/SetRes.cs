@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Manager : MonoBehaviour
+public class SetRes : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+        Screen.SetResolution(1024, 812, false);
     }
 
     // Update is called once per frame
